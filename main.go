@@ -35,9 +35,11 @@ func main() {
 		return c.Redirect("/api")
 	})
 
-	api := app.Group("/api", func(c *fiber.Ctx) error {
+	app.Get("/api", func(c *fiber.Ctx) error {
 		return c.SendString("Golang API Template by Akram Firmansyah")
 	})
+
+	api := app.Group("/api")
 
 	routes.RegisterUserRoutes(api.Group("/users"))
 

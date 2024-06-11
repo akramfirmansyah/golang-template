@@ -1,1 +1,6 @@
+# Air Hot Reload
+.air.toml
+tmp/
+
+# Enveronment Variabel
 .env
